@@ -1,0 +1,23 @@
+#contenedor_menu{
+
+    padding-top: 2%;
+    padding-bottom: 4%;
+
+}
+#form_contenedor{
+    width: 500px;
+    margin: 0% auto 0% auto;
+}
+.text_titulo{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+#contenedor_cliente{
+    padding-top: 6%;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+
