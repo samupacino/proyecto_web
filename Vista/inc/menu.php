@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active menu_barra" aria-current="page" href="index.php" name="resumen">Resumen de stock producto</a>
+          <a class="nav-link active menu_barra" aria-current="page" href="index.php?resumen" name="resumen">Resumen de stock producto</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active menu_barra" aria-current="page" href="index.php?ingreso" name="ingreso">Ingreso de stock</a>

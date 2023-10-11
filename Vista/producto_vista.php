@@ -6,6 +6,7 @@
 <?php
   include'inc/form_producto.php';
 ?>
+
 <?php
     include'inc/footer.php';
 ?>

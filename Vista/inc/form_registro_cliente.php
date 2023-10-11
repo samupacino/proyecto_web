@@ -1,65 +1,68 @@
+
 <div class="container-xl">
     <div id="contenedor_cliente">
     <div class="mb-4">
         <h4 class="card-title text_titulo">REGISTRO DE CLIENTE</h4>
     </div>
-    <form action="">
+           
+   
+    <form action="" id="form_cliente">
         <table class="table table-striped">
             <tbody>
 
                 <tr>
                     <td>Nombres</td>
                     <td>
-                        <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example">
+                        <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example"id="NOMBRES" name="NOMBRES">
                     </td>
                 </tr>
 
                 <tr>
                     <td>Apellido paterno</td>
                     <td>
-                        <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example">
+                        <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" name="APELLIDO_PATERNO">
                     </td>
                 </tr>
 
                 <tr>
                     <td>Apellido materno</td>
                     <td>
-                        <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example">
+                        <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" name="APELLIDO_MATERNO">
                     </td>
                 </tr>
 
                 <tr>
                     <td>Direccion</td>
                     <td>
-                        <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example">
+                        <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" name="DIRECCION">
                     </td>
                 </tr>
 
                 <tr>
                     <td>Telefono</td>
                     <td>
-                        <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example">
+                        <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" name="TELEFONO">
                     </td>
                 </tr>
 
                 <tr>
                     <td>Email</td>
                     <td>
-                        <input class="form-control form-control-sm" type="email" aria-label=".form-control-sm example">
+                        <input class="form-control form-control-sm" type="email" aria-label=".form-control-sm example" name="EMAIL">
                     </td>
                 </tr>
 
                 <tr>
                     <td>Documento</td>
                     <td>
-                        <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example">
+                        <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" name="TIPO_DOCUMENTO">
                     </td>
                 </tr>
 
                 <tr>
                     <td colspan="2">
                         <button type="submit" class="btn btn-primary">Guardar</button>
-                        <button type="button" class="btn btn-danger">Cancelar</button>
+                        <button type="button" class="btn btn-danger" id="cancel_cliente">Cancelar</button>
                     </td>
                 </tr>
 
@@ -68,3 +71,12 @@
     </form>
     </div>
 </div>
+
+<script>
+    window.addEventListener('load',function(){
+        var limpiar_casillas = document.getElementById('cancel_cliente');
+        limpiar_casillas.addEventListener('click',function(){
+            clear_inputs('form_cliente');
+        });
+    });
+</script>

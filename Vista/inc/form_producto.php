@@ -1,6 +1,6 @@
 <div id="contenedor_menu">
 <div id="form_contenedor">
-    <form class="font-monospace">
+    <form class="font-monospace" id="form_producto">
         <div class="mb-4">
             <h4 class="card-title text_titulo">Nuevo Producto</h4>
         </div>
@@ -21,26 +21,53 @@
         </div>
 
         <div class="col-md-4 mb-4">
-        <label for="unidad_medida" class="form-label">Unidad medida</label>
-        <select id="unidad_medida" class="form-select">
-        <option selected>Choose...</option>
-        <option>...</option>
+        <label for="unidad_medida" class="form-label" >Unidad medida</label>
+        <select id="unidad_medida" class="form-select" name="unidad_medida">
+        <option selected value="">SELECCIONE</option>
+        <option value="UNIDAD_1">UNIDAD_1</option>
+        <option value="UNIDAD_2">UNIDAD_2</option>
         </select>
         </div>
 
+        
+
         <div class="col-md-4 mb-4">
         <label for="almacen_producto" class="form-label">Almacen producto</label>
-        <select id="almacen_producto" class="form-select">
-        <option selected>Choose...</option>
-        <option>...</option>
+        <select id="almacen_producto" class="form-select" name="almacen_producto">
+        <option value="" selected>SELECCIONE</option>
+        <option value="ALMACEN_1">ALMACEN_1</option>
+        <option value="ALMACEN_2">ALMACEN_2</option>
         </select>
         </div>
 
         <div class="mb-2">
-        <button type="submit" class="btn btn-primary">Guardar</button>
-        <button type="button" class="btn btn-danger">Cancelar</button>
+        <button type="submit" class="btn btn-primary" name="GUARDAR_PRODUCTO">Guardar</button>
+        <button type="button" class="btn btn-danger" id="cancelar">Cancelar</button>
         </div>
 
     </form>
 </div>
 </div>
+
+<script>
+    window.addEventListener('load',function(event){
+    
+        var cancelar = document.getElementById('cancelar');
+        cancelar.addEventListener('click',function(){
+
+            clear_inputs('form_producto');
+/*
+            var select = document.getElementById('form_producto');
+            
+            for(var i = 0 ; i < select.elements.length ; i++){
+                if(select.elements[i].tagName == 'INPUT'){
+                    select.elements[i].value = "";
+                }else if(select.elements[i].tagName == 'SELECT'){
+                    select.elements[i].options[0].selected = true;
+                }
+            }
+            */
+
+        });
+    });
+</script>

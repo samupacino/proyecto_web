@@ -15,25 +15,57 @@
 
     }else if(isset($_GET['producto'])){
 
-        $controlador->producto_vista();
-
+        if(isset($_GET['producto']) && isset($_GET['GUARDAR_PRODUCTO'])){
+            echo json_encode($controlador->registro_producto());
+        }else{
+            $controlador->producto_vista();
+        }
     }else if(isset($_GET['ingreso'])){
 
-        $controlador->ingreso_stock_vista();
+        if(isset($_GET['ingreso']) && isset($_GET['GUARDAR_INGRESO'])){
+            echo json_encode($controlador->registro_movimiento_stock());
+        }else{
+            $controlador->ingreso_stock_vista();
+        }
+        
 
     }else if(isset($_GET['salida'])){
+        if(isset($_GET['salida']) && isset($_GET['GUARDAR_SALIDA'])){
 
-        $controlador->salida_stock_vista();
+            echo json_encode($controlador->registro_movimiento_stock());
+            
+        }else{
+            $controlador->salida_stock_vista();
+        }
+        
 
     }else if(isset($_GET['clientes'])){
 
-        $controlador->registro_clientes_vista();
-
+        if(isset($_GET['clientes']) && isset($_GET['GUARDAR_CLIENTE'])){
+            echo json_encode($controlador->registro_cliente());
+        }else{
+            $controlador->registro_clientes_vista();
+        }
+    
     }else if(isset($_GET['proveedor'])){
 
-        $controlador->registro_proveedor_vista();
+        if(isset($_GET['proveedor']) && isset($_GET['GUARDAR_PROVEEDOR'])){
+            echo json_encode($controlador->registro_proveedor());
+        }else{
+            $controlador->registro_proveedor_vista();
+        }
+
+    }else if(isset($_GET['resumen'])){
+
+        if(isset($_GET['resumen']) && isset($_GET['cargarnuevos'])){
+            echo json_encode($controlador->get_movimiento_datos());
+        }else{
+            $controlador->resumen_movimiento_vista();
+        }
+       
         
     }else{
+        
         $controlador->login_vista();
 
     }

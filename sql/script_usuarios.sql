@@ -1,4 +1,4 @@
-
+--/Applications/MAMP/Library/bin/
 --./mysql -h localhost -u root -p
 
 CREATE TABLE usuario (

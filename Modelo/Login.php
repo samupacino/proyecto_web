@@ -1,6 +1,5 @@
 <?php
 
-    include'Modelo/Conexion.php';
 
     class Login{
 
@@ -31,6 +30,7 @@
                 $datos['clave'],  
             ));
             $resultado = $statement->fetchAll();
+            
             return $resultado;
         }
     }
