@@ -29,7 +29,7 @@
                 <?php
                     foreach($listar_producto as $producto){
                 ?>    
-                <option> <?php echo $producto['NOMBRE']?> </option> 
+                <option> <?php echo $producto['NOMBRE'].' '.$producto['MARCA']?> </option> 
                 <?php        
                     }
                 ?>

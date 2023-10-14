@@ -24,8 +24,9 @@
         <label for="unidad_medida" class="form-label" >Unidad medida</label>
         <select id="unidad_medida" class="form-select" name="unidad_medida">
         <option selected value="">SELECCIONE</option>
-        <option value="UNIDAD_1">UNIDAD_1</option>
-        <option value="UNIDAD_2">UNIDAD_2</option>
+        <option value="KILOGRAMO">KILOGRAMO</option>
+        <option value="CANTIDAD">CANTIDAD</option>
+        <option value="BOLSA">BOLSA</option>
         </select>
         </div>
 

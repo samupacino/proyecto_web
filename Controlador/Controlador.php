@@ -185,7 +185,7 @@ class Controlador{
             $consultas = new Consulta();
             $consultas->movimiento_stock($datos_mov_salida);
 
-            $mensaje[0] = "SE HIZO SALIDA CON EXITO DE PRODUCTO" . $datos_mov_salida['NOMBRE_PRODUCTO'];
+            $mensaje[0] = "SE HIZO ".$_POST['TIPO_MOVIMIENTO']." CON EXITO DE PRODUCTO " . $datos_mov_salida['NOMBRE_PRODUCTO'];
         
         }catch(PDOException $e){
             $mensaje[0] = $e->getMessage(); 
@@ -225,11 +225,11 @@ class Controlador{
             $usuario = [];
             $login_usuario = new Login();
             $usuario = $login_usuario->buscar($datos_usuario);
-
+       
             if(count($usuario)>0){
                 $this->resumen_movimiento_vista();
             }else{
-                include'Vista/login_vista.php';
+                header("location:index.php");
             }
         }catch(PDOException $e){
 
