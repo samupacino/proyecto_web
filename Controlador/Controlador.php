@@ -110,7 +110,6 @@ class Controlador{
     public function registro_cliente(){
         $mensaje = [];
         try{
-
             $registro_cliente = [
                 "NOMBRES"=>$_POST['NOMBRES'],
                 "APELLIDO_PATERNO"=>$_POST['APELLIDO_PATERNO'],
@@ -171,7 +170,6 @@ class Controlador{
     public function registro_movimiento_stock(){
 
         $mensaje = [];
-
         try{
             
             $datos_mov_salida = [
