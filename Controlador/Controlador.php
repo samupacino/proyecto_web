@@ -3,6 +3,7 @@
 include'Librerias/Conexione/Conexion.php';
 include'Modelo/Login.php';
 include'Modelo/Consulta.php';
+include'Modelo/Archivo.php';
 
 class Controlador{
 
@@ -14,6 +15,11 @@ class Controlador{
     public function login_vista(){
 
         include'Vista/login_vista.php';
+
+    }
+    public function pdf_vista(){
+
+        include'Vista/main.php';
 
     }
 

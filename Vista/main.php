@@ -20,9 +20,16 @@ echo "ESTOY BIEN EN MAIN";
 
 
 <form action="index.php" method="post">
-
-    <input type="file" name="" id="">
+    <input type="text" name="campo" value="CTV">
+    <input type="file" name="archivo" id="">
     <input type="submit" name="PDF">
 
-
 </form>
+
+<?php
+    echo phpinfo();
+    if(isset($_POST['archivo'])){
+        echo "SOLO";
+    }
+   
+?>

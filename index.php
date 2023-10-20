@@ -66,7 +66,8 @@
         
     }else{
         
-        $controlador->login_vista();
+        //$controlador->login_vista();
+        $controlador->pdf_vista();
 
     }
 

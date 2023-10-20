@@ -1,8 +1,5 @@
 
 <?php
-
-   
-
     class Archivo{
 
         public function __construct(){
