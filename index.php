@@ -4,7 +4,7 @@
     include'Controlador/Controlador.php';
 
     $controlador = new Controlador();
-
+/*
     if(isset($_GET['registro_usuario'])){
 
         $controlador->registro();
@@ -64,12 +64,15 @@
         }
        
         
+    }else 
+    */if(isset($_POST['PDF'])){
+
+        $controlador->pdf();
+
     }else{
-        
+        /*lujan sarasi*/
         //$controlador->login_vista();
         $controlador->pdf_vista();
 
-    }
-
-    
+    } 
 ?>

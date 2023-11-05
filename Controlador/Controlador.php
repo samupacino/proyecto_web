@@ -22,6 +22,14 @@ class Controlador{
         include'Vista/main.php';
 
     }
+    public function pdf(){
+
+        $archivo = new Archivo();
+        //$archivo->subir_archivo();
+
+        include'Vista/pdf.php';
+
+    }
 
     public function producto_vista(){
 

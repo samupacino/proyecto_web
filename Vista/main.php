@@ -15,21 +15,32 @@
     $pdf->Cell(0,0,'Hola, Mundo');
     $pdf->Output();
 */
-echo "ESTOY BIEN EN MAIN";  
+
 ?>
+ <?php
+    include'inc/head.php';
+   
+?>                                          
+<form action="" method="post" enctype="multipart/form-data">
 
-
-<form action="index.php" method="post">
-    <input type="text" name="campo" value="CTV">
-    <input type="file" name="archivo" id="">
+    <input type="file" name="archivo">
     <input type="submit" name="PDF">
 
-</form>
+</form> 
+
+
 
 <?php
-    echo phpinfo();
-    if(isset($_POST['archivo'])){
-        echo "SOLO";
-    }
-   
+    $archivos = scandir("archivos");
+
+
+
+    $ruta = dirname(dirname(__FILE__)) . '/archivos/' . $archivos[2];
+    echo $ruta;
 ?>
+
+<a href="archivos/manualPic.pdf" target="_blank">DESCARGAR</a>
+<?php
+    include'inc/footer.php';
+?>
+
