@@ -24,13 +24,16 @@ class Controlador{
     }
     public function pdf(){
 
-        $archivo = new Archivo();
-        //$archivo->subir_archivo();
-
         include'Vista/pdf.php';
 
     }
 
+    public function generar_pdf(){
+
+        $archivo = new Archivo();
+        $archivo->generar_pdf();
+
+    }
     public function producto_vista(){
 
         include'Vista/producto_vista.php';

@@ -35,11 +35,19 @@
 
 
 
-    $ruta = dirname(dirname(__FILE__)) . '/archivos/' . $archivos[2];
-    echo $ruta;
-?>
+    //$ruta = dirname(dirname(__FILE__)) . '/archivos/' . $archivos[2];
+    //$ruta = 'archivos/' . $archivos[2];
 
-<a href="archivos/manualPic.pdf" target="_blank">DESCARGAR</a>
+    for($i = 2 ; $i < count($archivos) ; $i++){
+    ?>
+        <a href="<?php echo 'archivos/'.$archivos[$i] ?>"  target="_blank">DESCARGAR</a>
+        <a href="index.php?eliminar=<?php echo 'archivos/'.$archivos[$i] ?>">ELIMINAR</a>
+        
+        <br>
+    <?php
+    }
+    ?>
+    <a href="index.php?plantilla">ABRIR PLANTILLA</a>
 <?php
     include'inc/footer.php';
 ?>

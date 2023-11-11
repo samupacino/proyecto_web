@@ -69,10 +69,18 @@
 
         $controlador->pdf();
 
+    }if(isset($_GET['eliminar'])){
+
+        if(unlink($_GET['eliminar'])){
+            echo "ELIMINO";
+            header("location:index.php"); 
+        }
+        
+    }if(isset($_GET['plantilla'])){
+        $controlador->generar_pdf();
     }else{
         /*lujan sarasi*/
         //$controlador->login_vista();
         $controlador->pdf_vista();
-
     } 
 ?>
